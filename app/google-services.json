@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1011176242627",
+    "project_id": "catalogo-bcb79",
+    "storage_bucket": "catalogo-bcb79.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011176242627:android:565fb466c825a1af605176",
+        "android_client_info": {
+          "package_name": "com.jadca.catalogo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011176242627-ghmeng3hepgk287gqo7b5k7jd6vc1k2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrBRTt8krzTJNRZCuYCHar0cosWXiaGzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011176242627-ghmeng3hepgk287gqo7b5k7jd6vc1k2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
