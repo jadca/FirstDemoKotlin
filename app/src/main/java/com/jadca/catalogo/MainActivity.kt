@@ -2,7 +2,8 @@ package com.jadca.catalogo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.jadca.catalogo.producto.ProductoActivity
+import com.jadca.catalogo.extensions.redirecToActivity
+import com.jadca.catalogo.product.ui.ProductoActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

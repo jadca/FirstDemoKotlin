@@ -1,4 +1,4 @@
-package com.jadca.catalogo
+package com.jadca.catalogo.extensions
 
 import android.content.Context
 import android.content.Intent

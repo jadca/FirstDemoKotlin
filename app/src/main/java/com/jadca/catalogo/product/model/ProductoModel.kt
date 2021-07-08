@@ -1,4 +1,4 @@
-package com.jadca.catalogo.producto
+package com.jadca.catalogo.product.model
 
 import java.util.*
 

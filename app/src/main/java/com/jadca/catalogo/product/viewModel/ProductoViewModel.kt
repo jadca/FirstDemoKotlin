@@ -1,7 +1,8 @@
-package com.jadca.catalogo.producto
+package com.jadca.catalogo.product.viewModel
 
 import androidx.lifecycle.ViewModel
-import org.koin.android.ext.android.inject
+import com.jadca.catalogo.product.model.IProductoRepository
+import com.jadca.catalogo.product.model.productoModel
 import org.koin.java.KoinJavaComponent.inject
 
 class ProductoViewModel() :ViewModel()

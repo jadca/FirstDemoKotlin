@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingHorizontal="16dp"
     android:layout_marginTop="160dp"
-    tools:context=".producto.ProductoActivity">
+    tools:context=".product.ui.ProductoActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutDescripcion"

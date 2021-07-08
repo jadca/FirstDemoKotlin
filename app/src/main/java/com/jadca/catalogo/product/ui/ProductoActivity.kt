@@ -1,12 +1,11 @@
-package com.jadca.catalogo.producto
+package com.jadca.catalogo.product.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProviders
 import com.jadca.catalogo.databinding.ActivityProductoBinding
-import org.koin.android.ext.android.inject
-import java.text.SimpleDateFormat
+import com.jadca.catalogo.product.model.productoModel
+import com.jadca.catalogo.product.viewModel.ProductoViewModel
 import java.util.*
 
 class ProductoActivity : AppCompatActivity() {
