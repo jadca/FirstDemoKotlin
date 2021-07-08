@@ -7,8 +7,12 @@ import org.koin.java.KoinJavaComponent.inject
 
 class ProductoViewModel() :ViewModel()
 {
-    private val productoRepository by inject(IProductoRepository::class.java)
-    fun addProducto(productoModel: productoModel){
+    private  val productoRepository by inject(IProductoRepository::class.java)
+
+    fun add(productoModel: productoModel){
         productoRepository.AddProducto(productoModel)
+    }
+    fun getAll(){
+        productoRepository.GetAll()
     }
 }

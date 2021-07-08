@@ -29,8 +29,8 @@ class ProductoActivity : AppCompatActivity() {
                 descripcion  = it.textInputEditTextDescripcion.text.toString()
                 precio =  it.textInputEditTextPrecio.text.toString().toFloat()
             }
-            val producto = productoModel(UUID.randomUUID(),descripcion,precio)
-            viewModel.addProducto(producto)
+            val producto = productoModel(UUID.randomUUID().toString(),descripcion,precio)
+            viewModel.add(producto)
             binding.textViewData.text = producto.id.toString()
         }
     }
