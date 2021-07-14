@@ -4,6 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingVertical="16dp"
     tools:context=".product.ui.ListProductActivity">
-
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerViewContent"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:itemCount="5"
+    tools:listitem="@layout/item_producto"
+    />
 </androidx.constraintlayout.widget.ConstraintLayout>
