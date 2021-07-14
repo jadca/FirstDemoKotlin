@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProviders
 import com.jadca.catalogo.databinding.ActivityProductoBinding
+import com.jadca.catalogo.extensions.toast
 import com.jadca.catalogo.product.model.productoModel
 import com.jadca.catalogo.product.viewModel.ProductoViewModel
 import java.util.*
@@ -25,13 +26,14 @@ class ProductoActivity : AppCompatActivity() {
         binding.buttonGrabarProducto.setOnClickListener{
             var descripcion:String?
             var precio : Float?
-            binding.let {
-                descripcion  = it.textInputEditTextDescripcion.text.toString()
-                precio =  it.textInputEditTextPrecio.text.toString().toFloat()
-            }
+                descripcion  = binding.textInputEditTextDescripcion.text.toString()
+                precio =  binding.textInputEditTextPrecio.text.toString().toFloat()
             val producto = productoModel(UUID.randomUUID().toString(),descripcion,precio)
             viewModel.add(producto)
-            binding.textViewData.text = producto.id.toString()
+            toast("Registro exitoso")
+                descripcion  = ""
+            binding.textInputEditTextDescripcion.text?.clear()
+            binding.textInputEditTextPrecio.text?.clear()
         }
     }
 }
