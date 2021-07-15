@@ -17,4 +17,14 @@
     tools:itemCount="5"
     tools:listitem="@layout/item_producto"
     />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/crearbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerViewContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,10 @@
 package com.jadca.catalogo.product.viewModel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.jadca.catalogo.infrastructure.response.DataResponse
 import com.jadca.catalogo.product.model.IProductoRepository
 import com.jadca.catalogo.product.model.productoModel
@@ -10,6 +12,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.koin.java.KoinJavaComponent.inject
+import kotlin.math.log
 
 class ListProductoViewModel ():ViewModel(){
     private  val _productoRepository by inject(IProductoRepository::class.java)
@@ -19,9 +22,8 @@ class ListProductoViewModel ():ViewModel(){
     val onMessageError: LiveData<String> get() = _onMessageError
 
     init {
-        GlobalScope.launch {
-            var result = _productoRepository.GetAllX()
-            result.collect {
+        viewModelScope.launch {
+            _productoRepository.GetAllX2().collect {
                 validateResult(DataResponse.Success<List<productoModel>>(it))
             }
         }

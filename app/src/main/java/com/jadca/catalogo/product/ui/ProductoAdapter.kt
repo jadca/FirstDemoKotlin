@@ -18,7 +18,7 @@ class ProductoAdapter ():RecyclerView.Adapter<ProductoAdapter.ViewHolder>(){
            with(binding) {
                textViewDescriptionProducto.text=item.descripcion
                textViewPrecio.text = item.precio.toString()
-               imageViewBackgroundStatusProducto.load(""){
+               imageViewBackgroundStatusProducto.load(item.urlImg){
                    crossfade(true)
                    crossfade(3)
                }

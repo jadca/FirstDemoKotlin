@@ -2,11 +2,13 @@ package com.jadca.catalogo.product.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.LinearLayout
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jadca.catalogo.databinding.ActivityListProductBinding
 import com.jadca.catalogo.extensions.getViewModel
+import com.jadca.catalogo.extensions.redirecToActivity
 import com.jadca.catalogo.extensions.toast
 import com.jadca.catalogo.product.viewModel.ListProductoViewModel
 import com.jadca.catalogo.product.viewModel.ProductoViewModel
@@ -22,7 +24,12 @@ class ListProductActivity : AppCompatActivity() {
         setUpViewModel()
         setUpRecyclerView()
         setUpViewModelObserver()
-
+        setUpEvents()
+    }
+    private fun setUpEvents(){
+        binding.crearbutton.setOnClickListener {
+            redirecToActivity(ProductoActivity::class.java)
+        }
     }
     private fun setUpViewModel(){
         viewModel = getViewModel {
@@ -31,7 +38,7 @@ class ListProductActivity : AppCompatActivity() {
     }
     private fun setUpViewModelObserver(){
       viewModel.productoModel.observe(this,{
-         productoAdapter.list   =it
+          productoAdapter.list   =it
       })
         viewModel.onMessageError.observe(this,{
             toast(it)
